@@ -1,0 +1,80 @@
+/* Shared stylesheet */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { background-color: white; color: black; font: 16px/24px Helvetica, Arial, sans-serif; }
+img { max-width: 100%; height: auto; }
+p, li, a { overflow-wrap: break-word; }
+
+a { color: #008CBA; text-decoration: none; border-bottom: 1px dotted #999; }
+a:hover { border-bottom-style: solid; color: black; }
+
+/* ---------- Top bar (as original) ---------- */
+.topnav { overflow: hidden; background-color: black; }
+.topnav a { float: left; color: white; text-align: center; padding: 14px 16px; font-size: 17px; border-bottom: 0; }
+.topnav a:hover { background-color: black; color: #008CBA; }
+.topnav a.active { background-color: white; color: black; }
+
+/* ---------- Page ---------- */
+.wrap { width: 92%; max-width: 1200px; margin: 40px auto 60px; }
+.wrap::after { content: ""; display: block; clear: both; }
+.wrap > section + section { margin-top: 48px; }
+
+h1 { margin: 0 0 24px; padding: 0 0 16px; font-size: 36px; line-height: 1.2; font-weight: normal; letter-spacing: -1px; border-bottom: 1px solid #999; }
+h2 { font-size: 16px; line-height: 24px; font-weight: bold; }
+p { margin: 0 0 16px; }
+ul { margin: 0 0 0 20px; }
+li { margin: 0 0 12px; }
+
+/* ---------- Home ---------- */
+#pic { float: right; width: 32%; max-width: 360px; margin: 0 0 24px 40px; }
+.about { clear: both; padding-top: 8px; }
+
+/* ---------- Publications ---------- */
+.pub { margin-bottom: 20px; }
+.awards { margin: 6px 0 0 20px; }
+.awards li { margin: 0 0 2px; }
+
+/* ---------- Teaching ---------- */
+.course { display: list-item; list-style: disc; margin: 0 0 40px 20px; }
+.course h2 { text-decoration: underline; }
+.course p { margin: 0; }
+.quotes { margin: 16px 0 0 20px; }
+.quotes ul { margin-left: 20px; }
+.quotes li { margin: 0 0 8px; }
+
+/* ---------- Talks & Service ---------- */
+.talks li { margin: 0 0 4px; }
+.service-row { margin: 0 0 20px; }
+.service-row h2 { margin: 0 0 8px; }
+.service-row li { margin: 0 0 4px; }
+
+/* ---------- Students ---------- */
+.person { margin: 0 0 36px; }
+.person::after { content: ""; display: block; clear: both; }
+.person img { float: left; width: 15%; min-width: 96px; max-width: 170px; border: 1px dotted black; margin: 4px 24px 12px 0; }
+.person h2 { display: inline; }
+.person h2 span { font-weight: normal; }
+.person p { margin: 0; }
+.masters li { margin: 0 0 12px; }
+.masters span { display: block; }
+
+/* ---------- Tablets ---------- */
+@media (max-width: 800px) {
+  h1 { font-size: 30px; }
+  #pic { width: 38%; margin-left: 24px; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 600px) {
+  body { font-size: 15px; line-height: 23px; }
+  h2 { font-size: 15px; line-height: 23px; }
+  .topnav a { font-size: 13.5px; padding: 11px 7px; }
+  .wrap { margin: 24px auto 40px; }
+  h1 { font-size: 26px; letter-spacing: -.5px; margin-bottom: 18px; padding-bottom: 12px; }
+  #pic { float: none; display: block; width: 60%; max-width: 240px; margin: 0 0 20px; }
+  ul, .awards, .quotes ul { margin-left: 18px; }
+  .course { margin-left: 18px; }
+  .quotes { margin-left: 0; }
+  .person img { width: 96px; min-width: 0; margin-right: 16px; }
+}
